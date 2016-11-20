@@ -1,11 +1,11 @@
 FROM ubuntu
 
 RUN apt-get update
-RUN apt-get install software-properties-common -y
+RUN apt-get install software-properties-common wget -y
 RUN add-apt-repository ppa:openjdk-r/ppa -y
 RUN apt-get update
 RUN apt-get install openjdk-8-jdk -y
-ADD NEXUS_URL_JENKINS /opt/jenkins.war
+RUN wget NEXUS_URL_JENKINS -P /opt/jenkins.war
 RUN chmod 644 /opt/jenkins.war
 ENV JENKINS_HOME /jenkins
 
