@@ -1,4 +1,4 @@
-FROM 551163406316.dkr.ecr.us-west-2.amazonaws.com/baseimage:24
+FROM 551163406316.dkr.ecr.us-west-2.amazonaws.com/baseimage:2
 
 RUN apt-get update
 RUN apt-get install software-properties-common wget -y
